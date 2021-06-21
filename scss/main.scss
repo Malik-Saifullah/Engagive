@@ -1,0 +1,487 @@
+@import "./vendor/fonts.scss";
+@import "./vendor/reset.scss";
+@import "./vendor/mixins.scss";
+@import "./vendor/variables.scss";
+
+@import "../lib/bootstrap-5.0.1/css/bootstrap.min.css";
+
+
+/*=======================================================
+                        header
+=======================================================*/
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    z-index: 999999;
+    .header-outer-box{
+        .header-inner-box{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 50px;
+            .logo-box{
+                display: flex;
+                align-items: center;
+                padding-left: 25px;
+                padding-right: 50px;
+                height: 50px;
+                @media screen and (max-width: 500px) {
+                    padding-left: 15px;
+                    padding-right: 25px;
+                }
+                .brand-link{
+                    display: flex;
+                    align-items: center;
+                    .brand-img{
+                        max-width: 40px;
+                        margin-right: 10px;
+                    }
+                    .brand-name{
+                        font-size: calc(20px + .3vw);
+                        margin: 0;
+                        line-height: 1.3;
+                        font-weight: 500;
+                        color: $colorWhite;
+                    }
+                }
+            }
+            .btn-login-box{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                // background: linear-gradient(to right, $primaryColor, $secondaryColor);
+                padding-right: 25px;
+                width: 100%;
+                height: 50px;
+                @media screen and (max-width: 500px) {
+                    padding-right: 15px;
+                }
+                .login{
+                    font-size: calc(12px + .3vw);
+                    line-height: 1.3;
+                    font-weight: 400;
+                    color: $colorWhite;
+                }
+            }
+        }
+    }
+    .bg-scroll{
+        position: absolute;
+        height: 50px;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        background: linear-gradient(to right, $primaryColor, $secondaryColor);
+        border-radius: 50px 0 0 50px;
+    }
+}
+
+
+/*=======================================================
+                        hero-section
+=======================================================*/
+#hero-section {
+    background: linear-gradient(225deg, $primaryColor, $secondaryColor);
+    min-height: 100vh;
+    height: 100%;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    .container{
+        .hero-section-outer-box{
+            min-height: calc(100vh - 150px);
+            display: flex;
+            align-items: center;
+            .hero-section-inner-box{
+                .hero-section-title{
+                    color: $colorWhite;
+                    font-size: calc(20px + .7vw);
+                    line-height: 1.3;
+                    font-weight: 700;
+                    margin: 0;
+                }
+                .hero-section-subtitle{
+                    color: $colorWhite;
+                    font-size: $fontSizeSmall;
+                    line-height: 1.3;
+                    font-weight: 400;
+                    font-style: italic;
+                    margin-bottom: calc(12px + 1.2vw);
+                }
+                .hero-section-desc{
+                    color: $colorWhite;
+                    font-size: $fontSizeSmall;
+                    line-height: 1.3;
+                    font-weight: 400;
+                    margin: 0;
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+}
+
+
+/*=======================================================
+                        client-logos
+=======================================================*/
+#client-logos {
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,.3);
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        .client-logo-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            margin-right: 15px;
+            margin-left: 15px;
+            width: 150px;
+            img{
+                filter: invert(74%) sepia(51%) saturate(252%) hue-rotate(139deg) brightness(90%) contrast(90%);
+            }
+        }
+    }
+}
+
+
+/*=======================================================
+                        meaningful-message-tabs
+=======================================================*/
+#meaningful-message-tabs {
+    position: relative;
+    &::after{
+        position: absolute;
+        content: "";
+        background: $primaryColor;
+        width: calc(10vw - 25px);
+        height: 100%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    .container{
+        .row{
+            .meaningful-message-left-side{
+                padding-top: calc(24px + 2.5vw);
+                .meaningful-message-title{
+                    color: $primaryColor;
+                    font-size: calc(20px + .3vw);
+                    line-height: 1.3;
+                    font-weight: 700;
+                }
+                #v-pills-tab{
+                    padding-left: 15px;
+                    .nav-link{
+                        display: flex;
+                        align-items: center;
+                        border-radius: 10px;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                        margin-top: 7px;
+                        margin-bottom: 7px;
+                        margin-right: 70px;
+                        position: relative;
+                        .tab-title{
+                            color: $primaryColor;
+                            font-size: $fontSizeMedium;
+                            line-height: 1.3;
+                            font-weight: 400;
+                            text-align: left;
+                            min-width: 90px;
+                            margin: 0;
+                        }
+                        .tab-info{
+                            color: $colorBlack;
+                            font-size: $fontSizeSmall;
+                            line-height: 1.3;
+                            font-weight: 400;
+                            text-align: left;
+                            margin: 0;
+                        }
+                    }
+                    @keyframes move {
+                        0% { 
+                            right: 0px;
+                        }
+                        100% {
+                            right: -40px;
+                        }
+                    }
+                    @keyframes move1 {
+                        0% { 
+                            right: 0px;
+                        }
+                        100% {
+                            right: -80px;
+                        }
+                    }
+                    .nav-link.active,.nav-link:hover{
+                        background: transparent;
+                        box-shadow: 1px 1px 10px 0px rgba($color: $colorBlack, $alpha: .3);
+                        &::before{
+                            position: absolute;
+                            content: "";
+                            top: 50%;
+                            right: -40px;
+                            transform: translateY(-50%);
+                            background-image: url("../images/icons/icoon-01.png");
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            width: 33px;
+                            height: 80px;
+                            animation: move .3s ease-in-out alternate;
+                            -webkit-animation: move .3s ease-in-out alternate;
+                        }
+                        &::after{
+                            position: absolute;
+                            content: "";
+                            top: 48.5%;
+                            transform: translateY(-50%);
+                            right: -80px;
+                            background-image: url("../images/icons/icoon-02.png");
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            width: 33px;
+                            height: 20px;
+                            animation: move1 .6s ease-in-out alternate;
+                            -webkit-animation: move1 .6s ease-in-out alternate;
+                        }
+                    }
+                }
+            }
+            .meaningful-message-right-side{
+                background-color: $primaryColor;
+                @media screen and (min-width: 768px) {
+                    border-radius: 100% 0 0 100%;
+                    -webkit-border-radius: 100% 0 0 100%;
+                    -moz-border-radius: 100% 0 0 100%;
+                    -ms-border-radius: 100% 0 0 100%;
+                    -o-border-radius: 100% 0 0 100%;
+                }
+                #v-pills-tabContent{
+                    .tab-pane{
+                        position: relative;
+                        .tab-content-box{
+                            position: absolute;
+                            top: 50%;
+                            right: 0;
+                            transform: translateY(50%);
+                            -webkit-transform: translateY(50%);
+                            -moz-transform: translateY(50%);
+                            -ms-transform: translateY(50%);
+                            -o-transform: translateY(50%);
+                            img{
+                                max-width: 250px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*=======================================================
+                        banner
+=======================================================*/
+#banner {
+    background: linear-gradient(225deg, rgba($color: $bannerColor01, $alpha: .8), rgba($color: $bannerColor02, $alpha: .8)), url("../images/banner-bg-01.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+}
+
+
+/*=======================================================
+                        services
+=======================================================*/
+#services {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .container{
+        .services-outer-box{
+            .services-inner-box{
+                .services-title{
+                    color: $primaryColor;
+                    font-size: calc(20px + .3vw);
+                    line-height: 1.3;
+                    font-weight: 700;
+                    text-align: center;
+                    margin-top: 50px;
+                    margin-bottom: 25px;
+                }
+                .row{
+                    margin: 0;
+                    .col-md-4{
+                        padding: 0;
+                        .services-box{
+                            margin-top: 50px;
+                            margin-bottom: 50px;
+                            .service-img-box{
+                                text-align: center;
+                                img{
+                                    width: 50px;
+                                    height: 50px;
+                                    filter: invert(31%) sepia(12%) saturate(6631%) hue-rotate(154deg) brightness(89%) contrast(87%);
+                                    -webkit-filter: invert(31%) sepia(12%) saturate(6631%) hue-rotate(154deg) brightness(89%) contrast(87%);
+                                }
+                            }
+                            .divider-box{
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                &::before{
+                                    position: absolute;
+                                    content: "";
+                                    top: 34px;
+                                    left: 0;
+                                    right: 0;
+                                    background: #d8d8d8;
+                                    width: 100%;
+                                    height: 3px;
+                                    z-index: -1;
+                                }
+                                .divider{
+                                    position: relative;
+                                    background: $primaryColor;
+                                    width: 20px;
+                                    height: 20px;
+                                    border-radius: 30px;
+                                    margin: 25px auto;
+                                    &::before{
+                                        position: absolute;
+                                        content: "";
+                                        top: 0;
+                                        left: -3px;
+                                        background: $colorWhite;
+                                        width: 26px;
+                                        height: 100%;
+                                        z-index: -1;
+                                    }
+                                }
+                            }
+                            .service-title{
+                                color: $primaryColor;
+                                font-size: $fontSizeMedium;
+                                line-height: 1.3;
+                                font-weight: 400;
+                                text-align: center;
+                                max-width: 300px;
+                                margin: auto;
+                                margin-bottom: 25px;
+                            }
+                            .sevice-info{
+                                font-size: $fontSizeSmall;
+                                line-height: 1.3;
+                                font-weight: 400;
+                                text-align: center;
+                                max-width: 300px;
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*=======================================================
+                        brand-trusted-by
+=======================================================*/
+#brand-trusted-by {
+    padding-bottom: 50px;
+    .container{
+        .brand-trusted-by-title{
+            color: $primaryColor;
+            font-size: calc(20px + .3vw);
+            line-height: 1.3;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 15px;
+        }
+        .brand-trusted-by-outer-box{
+            .brand-trusted-by-inner-box{
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                .brand-trusted-by-box{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 15px;
+                    margin: 15px;
+                    width: 170px;
+                    img{
+                        filter: invert(31%) sepia(12%) saturate(6631%) hue-rotate(154deg) brightness(89%) contrast(87%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*=======================================================
+                        footer
+=======================================================*/
+#footer {
+    background-color: $primaryColor;
+    padding-top: 50px;
+    padding-bottom: 15px;
+    .footer-top{
+        .row{
+            .col-md-3{
+                .logo-box{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    img{
+                        max-width: 30px;
+                        margin-right: 10px;
+                    }
+                    .brand-name{
+                        color: $colorWhite;
+                        font-size: $fontSizeLarge;
+                        line-height: 1.3;
+                        font-weight: 400;
+                        margin: 0;
+                    }
+                }
+                .address-box{
+                    .address{
+                        max-width: 163px;
+                        color: $colorWhite;
+                        font-size: $fontSizeSmall;
+                        line-height: 1.7;
+                        font-weight: 400;
+                        margin-bottom: calc(20px + 2vw);
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        .copyright{
+            color: $colorWhite;
+            font-size: $fontSizeSmall;
+            line-height: 1.3;
+            font-weight: 400;
+            margin: 0;
+            border-top: 3px solid $colorWhite;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+}

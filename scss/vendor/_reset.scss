@@ -1,0 +1,37 @@
+/*=======================================================
+                reset default setting
+=======================================================*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "ITC-Avant-Normal";
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+// img {
+//     display: block;
+//     width: 100%;
+// }
