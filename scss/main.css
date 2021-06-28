@@ -151,11 +151,15 @@ a {
                         hero-section
 =======================================================*/
 #hero-section {
-  background: linear-gradient(225deg, #1695a6, #106a76);
+  background: linear-gradient(225deg, #1695a6, #106a76), url("../images/bg-01.png");
   min-height: 100vh;
   height: 100%;
   padding-top: 75px;
   padding-bottom: 75px;
+  background-size: cover;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 #hero-section .container .hero-section-outer-box {
   min-height: calc(100vh - 150px);
