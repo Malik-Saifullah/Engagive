@@ -13,6 +13,18 @@
   integrity="sha384-sGMbmxgVprpEFMz6afNDyADd4Kav86v5Tvo2Y6w5t8tHUn1P1at3lCjN7IQo2c7E"
   crossorigin="anonymous"
 ></script>
+    <script>
+        Sentry.init({
+          dsn: "https://ef7892c0ed08412b9d2bcd9675b38a19@o293780.ingest.sentry.io/6034527",
+          integrations: [new Integrations.BrowserTracing()],
+
+          // Set tracesSampleRate to 1.0 to capture 100%
+          // of transactions for performance monitoring.
+          // We recommend adjusting this value in production
+          tracesSampleRate: 1.0,
+        });
+        myUndefinedFunction();
+    </script>
 </head>
 
 <body>
